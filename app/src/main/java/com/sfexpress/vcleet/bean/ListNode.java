@@ -7,10 +7,10 @@ package com.sfexpress.vcleet.bean;
  * @since 2022/4/7 07:38
  */
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
     }
 }
