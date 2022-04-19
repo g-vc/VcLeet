@@ -12,14 +12,15 @@ fun numWays(n: Int): Int {
     if(n < 2){
         return 1
     }
-    //跳法数组
-    val f = IntArray(n + 1)
     //初始条件
-    f[0] = 1
-    f[1] = 1
+    var p = 1
+    var q = 1
+    var r = 0
     for(i in 2 .. n){
-        f[i] = (f[i - 1] + f[i - 2]) % mod
+        r = (p + q) % mod
+        p = q
+        q = r
     }
 
-    return f[n]
+    return r
 }
